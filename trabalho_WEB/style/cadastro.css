@@ -1,0 +1,33 @@
+body{
+    background: url("../img/coelho_preto_branco.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.alinhamento {
+    /* margin-top: 7rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .border {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    padding: 10% 3% 10% 3%;
+    border-radius: 20px;
+  }
+  
+  @media (min-width: 576px) {
+    body{
+        background: url("../img/gato_laranja.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .border {
+      max-width: 400px;
+    }
+  }
+  
