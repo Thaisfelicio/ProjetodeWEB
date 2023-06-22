@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+
+body{
+    background: url("../img/passaro.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.alinhamento {
+    /* margin-top: 7rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+.border {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    padding: 10% 3% 10% 3%;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* backdrop-filter: blur(2px); */
+    -webkit-backdrop-filter: blur(2px);
+    border: 0;
+    z-index: -1;
+    box-shadow: 3px 3px 3px rgb(125, 125, 125);
+  }
+
+h1{
+  font-size: 3em;
+  font-weight: 800;
+}
+
+label{
+  font-size: 1.5em;
+}
+
+#passwordHelpBlock{
+  display: none;
+}
+  
+.page_login, h1{
+  text-align: center;
+}
+
+.page_login, h1, label, p, a{
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px black;
+  /* z-index: 0; */
+}
+
+.form-control{
+  border-radius: 30px;
+  background-color: rgba(255, 192, 147, 0.75);
+}
+
+.form-control::placeholder{
+  font-style: italic;
+  font-weight: 100;
+}
+
+a{
+  color: #FF9F59;
+}
+
+.center_button{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 5%;
+  font-size: 2em;
+  font-weight: bold;
+  background-color: #934A15;
+  border-radius: 50px;
+  border: none;
+  color: #FFE3CE;
+  width: 70%;
+}
+
+  @media (min-width: 576px) {
+    body{
+        background: url("../img/cao_marrom.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .border {
+      max-width: 400px;
+    }
+  }
+  
+  @media (min-width: 768px){
+    .border{
+      max-height: 700px;
+    }
+    .g-3, .gx-3{
+      --bs-gutter-x: 0rem;
+    }
+  }
