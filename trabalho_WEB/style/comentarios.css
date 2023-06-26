@@ -1,12 +1,41 @@
+body{
+    background-color: #FFE3CE;
+}
+.img-fluid{
+    border-radius: 15px;
+    transform: rotate(-25deg);
+}
+#button_login{
+    transform: translateX(45%);
+    border-radius: 40px;
+    width: 25%;
+    background-color: #FF9F9F;
+    box-shadow: 2px 3px 1px #571836;
+    border: none;
+}
+.text-center{
+    background-color: white;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    transform: translateX(40%);
+}
 .rounded{
     width: 48px;
     height: 44px;
+    text-align: center
+}
+.navbar{
+    background-color: #97295E;
+    height: 20%;
 }
 .navbar-toggler{
     border: none;
+    color: white;
 }
 .navbar-toggler-icon{
     scale: 1.5;
+    background-image: url('../img/menu_FILL1_wght700_GRAD200_opsz48.svg');
 }
 .banner{
     background: url('../img/cao_preto_e_branco.jpg');
@@ -20,4 +49,18 @@
     font-weight: bold;
     text-shadow: 2px 2px 2px #8D0000;
     padding-top: 4%;
+}
+#comment_button{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 40px;
+    background-color: #D9D9D9;
+    color: black;
+    border: none;
+    box-shadow: 2px 3px 1px grey;
+}
+h2, h3{
+    text-align: center;
+    margin: 5% 0 5% 0;
 }
