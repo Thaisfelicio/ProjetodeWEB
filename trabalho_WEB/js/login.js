@@ -1,27 +1,23 @@
-let usuario_preCadastrado = {
-    "nome": 'Thais',
-    "senha": 'senha12'
-}
-let listaUsuario = [];
-listaUsuario.push(usuario_preCadastrado);
-sessionStorage.cadastro = JSON.stringify(listaUsuario);
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.querySelector('.container form');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio do formulário padrão
 
-function entrar(){
-    let usuario = document.querySelector('#validationServer01');
-    let senha = document.querySelector('inputPassword4');
+    // Obtenha os valores dos campos de entrada
+    var username = document.getElementById('validationServer01').value;
+    var password = document.getElementById('inputPassword5').value;
 
-    
-    let usuarioValido = {
-        "nome": '',
-        "senha": ''
+    // Validar os campos de entrada (exemplo simples)
+    if (username === 'admin' && password === '123456') {
+      // Login bem-sucedido
+      alert('Login realizado com sucesso!');
+
+      // Redirecionar para a página principal
+      window.location.href = '.html';
+    } else {
+      // Login inválido
+      alert('Nome de usuário ou senha incorretos!');
     }
-    sessionStorage.cadastro = "[]";
-    listaUsuario = JSON.parse(sessionStorage.cadastro);
+  });
+});
 
-    listaUsuario.forEach(element => {
-        if(usuario.value == element.nome && senha.value == element.senha)
-        {
-            alert('Logado!');
-        }
-    });
-}

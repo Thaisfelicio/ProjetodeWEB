@@ -1,0 +1,55 @@
+body{
+    background: url("../img/coelho_preto_branco.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .alinhamento {
+    /* margin-top: 7rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .border {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    padding: 10% 3% 10% 3%;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.001);
+    backdrop-filter: blur(5px);
+    border: 0;
+    z-index: 999;
+  }
+  
+  #passwordHelpBlock{
+    display: none;
+  }
+  
+  .page_login, h1{
+    text-align: center;
+  }
+  .page_login, h1, label, p, a{
+  font-family: inherit;
+  }
+  
+  .center_button{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 5%;
+  }
+  
+  @media (min-width: 576px) {
+    body{
+        background: url("../img/gato_laranja.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .border {
+      max-width: 400px;
+    }
+  }
+  
