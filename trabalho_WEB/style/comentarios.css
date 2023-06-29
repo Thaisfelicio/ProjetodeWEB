@@ -83,15 +83,18 @@ h2, h3{
     height: 1.5rem;
     font-size: 14px;
     transform: translateX(-30%);
+    border: none;
 }
 
 span{
+    color: white;
     transform: translateX(-50%);
     font-size: 14px;
 }
 .icones{
     scale: 0.4;
     color: white;
+    
     transform: translateX(-70%);
 }
 #curtidas{
