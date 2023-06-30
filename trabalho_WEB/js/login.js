@@ -44,6 +44,9 @@ function entrar(){
     {
         window.location.href = paginaComentarios;
         console.log("logado")
+        let token = Math.random().toString(16).substring(2);
+        console.log(token);
+        localStorage.setItem('token', token);
     }
 }
 

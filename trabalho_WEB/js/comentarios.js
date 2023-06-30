@@ -94,6 +94,18 @@ function contadorCurtidas() {
   };
 }
 
+function Sair_daConta() {
+  localStorage.removeItem('token');
+  
+}
 comentar.addEventListener("click", ()=>{
-  criarCardComentario("Thais", "eu nao tenho petfrppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp");  
+  if(localStorage.getItem('token') == null)
+  {
+    alert('Você precisa estar logado para comentar!');
+    window.location.href = '../pages/Login.html';
+  }
+  else
+  {
+      criarCardComentario("Thais", "eu nao tenho petfrppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp");  
+  }
 })
