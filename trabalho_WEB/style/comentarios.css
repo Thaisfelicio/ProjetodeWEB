@@ -66,6 +66,7 @@ h2, h3{
 }
 .card{
     border-radius: 20px;
+    margin-top: 2%;
 }
 .botoes{
     justify-content: space-between;
@@ -99,4 +100,7 @@ span{
 }
 #curtidas{
     margin-left: 25%;
+}
+#secaoComentarios{
+    padding: 0 5% 0 5%;
 }

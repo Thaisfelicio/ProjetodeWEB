@@ -1,7 +1,10 @@
 const comentar = document.querySelector('#comment_button');
+const secaoComentarios = document.querySelector('#secaoComentarios');
+
 const iconeEditar = '../img/edit_FILL0_wght400_GRAD0_opsz48.svg';
 const iconeExcluir = '../img/delete_FILL0_wght400_GRAD0_opsz48.svg';
 const iconeCurtir = '../img/favorite_FILL0_wght400_GRAD0_opsz48.svg';
+const iconeCurtido = '../img/coracao_preenchido.png';
 
 function botao_comentarios(icone, palavra_botao, cor_botao){
   let botao = document.createElement("button");
@@ -24,8 +27,11 @@ function botao_comentarios(icone, palavra_botao, cor_botao){
 
   return botao;
 }
+ 
 function criarCardComentario(nomeUsuario, comentario){
-  
+  // let secaoComentarios = document.createElement('div');
+  // secaoComentarios.classList.add("container");
+
   let card = document.createElement('div');
   card.classList.add("card");
   // card.classList.add("container");
@@ -58,16 +64,20 @@ function criarCardComentario(nomeUsuario, comentario){
   botoes.appendChild(botao_comentarios(iconeExcluir, 'Excluir', 'D62C2C'));
   botoes.appendChild(curtida);
 
+  
+
   card_body.appendChild(nome);
   card_body.appendChild(comentario_usuario);
   card_body.appendChild(botoes);
 
   card.appendChild(card_body);
 
-  document.body.appendChild(card);
+  secaoComentarios.appendChild(card);
+
+  document.body.appendChild(secaoComentarios);
+  // document.body.appendChild(card);
 
   return card;
-
 }
 
 function contadorCurtidas() {
@@ -83,6 +93,7 @@ function contadorCurtidas() {
     }
   };
 }
+
 comentar.addEventListener("click", ()=>{
-  criarCardComentario("Thais", "eu nao tenho pet");  
+  criarCardComentario("Thais", "eu nao tenho petfrppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp");  
 })
