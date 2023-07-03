@@ -50,6 +50,7 @@ function criarCardComentario(nomeUsuario, comentario) {
   let editar = botao_comentarios(iconeEditar, "Editar", "FFCC00");
   let excluir = botao_comentarios(iconeExcluir, "Excluir", "FF0000");
   let curtir = botao_comentarios(iconeCurtir, "Curtir", "00CCFF");
+  curtir.id = 'curtido';
 
   let contadorCurtidas = document.createElement('span');
   contadorCurtidas.classList.add('contador-curtidas');
@@ -78,6 +79,10 @@ function criarCardComentario(nomeUsuario, comentario) {
     const contadorCurtidas = card.querySelector('.contador-curtidas');
     const iconeCurtir = curtir.querySelector('.icones');
     const cardCurtido = card.querySelector('.card-body');
+    // iconeCurtir.classList.add("icones");
+    curtir.src = iconeCurtido;
+    // curtir.classList.add("icones");
+    curtir.style.scale = '0.1';
 
     // Verifica se o usuário já curtiu o comentário
     if (usuarioJaCurtiu()) {
@@ -138,6 +143,8 @@ document.getElementById('btnSalvarComentario').addEventListener("click", () => {
 });
 
 const botaoLogin = document.querySelector('#button_login');
+
+
 
 botaoLogin.addEventListener("click", () => {
   window.location.href = "../pages/Login.html";
