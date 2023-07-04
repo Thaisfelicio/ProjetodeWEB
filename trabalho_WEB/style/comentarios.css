@@ -12,6 +12,15 @@ body{
     background-color: #FF9F9F;
     box-shadow: 2px 3px 1px #571836;
     border: none;
+    width: 5rem;
+}
+#botao_login{
+    transform: translateX(45%);
+    border-radius: 40px;
+    width: 25%;
+    background-color: #FF9F9F;
+    box-shadow: 2px 3px 1px #571836;
+    border: none;
 }
 .text-center{
     background-color: white;
@@ -105,3 +114,7 @@ span{
     padding: 0 5% 0 5%;
 }
 
+#sair{
+    margin-left: 50%;
+   
+}

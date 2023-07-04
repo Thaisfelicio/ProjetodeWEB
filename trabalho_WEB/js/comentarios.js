@@ -1,13 +1,35 @@
 let cardId = 0;
 
+const paginaLogin = '../pages/Login.html';
 const comentar = document.querySelector('#comment_button');
 const secaoComentarios = document.querySelector('#secaoComentarios');
-
+const botaoLogin = document.querySelector('#button_login');
+const divNav = document.querySelector('.navbar-brand');
+const botaoSair = document.querySelector('#sair');
 const iconeEditar = '../img/edit_FILL0_wght400_GRAD0_opsz48.svg';
 const iconeExcluir = '../img/delete_FILL0_wght400_GRAD0_opsz48.svg';
 const iconeCurtir = '../img/favorite_FILL0_wght400_GRAD0_opsz48.svg';
 const iconeCurtido = '../img/coracao_preenchido.png';
 
+let nomeUsuario = localStorage.getItem('usuarios.usuario');
+
+console.log(nomeUsuario);
+
+if(localStorage.getItem('token') != null)
+{
+  let usuario_logado = JSON.parse(localStorage.getItem('usuarioLogado'));
+  let nome_usuarioLogado = usuario_logado.usuario;
+
+  botaoLogin.textContent = nome_usuarioLogado;
+
+  let botao_sair = document.createElement('a');
+  botao_sair.innerHTML = "Sair";
+  botao_sair.id = 'sair';
+  botao_sair.style.color = "blue";
+  botao_sair.style.fontSize = "1.2em";
+  
+  divNav.appendChild(botao_sair);
+}
 function botao_comentarios(icone, palavra_botao, cor_botao) {
   let botao = document.createElement("button");
   botao.classList.add("btn");
@@ -125,8 +147,17 @@ function criarCardComentario(nomeUsuario, comentario) {
 
 comentar.addEventListener("click", () => {
   // Verifica se o usuário está autenticado antes de exibir o modal de comentário
-  console.log('Usuário está autenticado. Exibindo o modal de comentário.');
-  $('#modalComentario').modal('show');
+  if(localStorage.getItem('token') == null)
+  {
+    alert('Você precisa estar logado para acessar essa página');
+    window.location.href = paginaLogin;
+  }
+  else
+  {
+    console.log('Usuário está autenticado. Exibindo o modal de comentário.');
+    $('#modalComentario').modal('show');
+  }
+  
 });
 
 document.getElementById('btnSalvarComentario').addEventListener("click", () => {
@@ -142,11 +173,15 @@ document.getElementById('btnSalvarComentario').addEventListener("click", () => {
   }
 });
 
-const botaoLogin = document.querySelector('#button_login');
+botaoSair.addEventListener('click', ()=>{
+  sair();
+})
 
-
+function sair() {
+  localStorage.removeItem('token');
+}
 
 botaoLogin.addEventListener("click", () => {
-  window.location.href = "../pages/Login.html";
+  window.location.href = paginaLogin;
 });
 
